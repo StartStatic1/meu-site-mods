@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - ApkBugado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" target="_blank" class="sidebar-logo">
+                    <div class="sidebar-logo-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <span class="sidebar-logo-text">Apk<span>Bugado</span></span>
+                </a>
+                <div class="sidebar-subtitle">Painel Administrativo</div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Menu Principal</div>
+                    <button class="nav-item active" data-page="dashboard">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </button>
+                    <button class="nav-item" data-page="apps">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Gerenciar Apps</span>
+                        <span class="nav-badge" id="navAppsCount">0</span>
+                    </button>
+                    <button class="nav-item" data-page="add-app">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Adicionar App</span>
+                    </button>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Configurações</div>
+                    <button class="nav-item" data-page="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Configurações</span>
+                    </button>
+                    <a href="../index.html" target="_blank" class="nav-item">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Ver Site</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-details">
+                        <div class="user-name">Administrador</div>
+                        <div class="user-role">Super Admin</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- TOP BAR -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="page-title" id="pageTitle">Dashboard</h1>
+                </div>
+                <div class="topbar-right">
+                    <button class="btn-export" onclick="copyDatabaseCode()" title="Copiar código para o site">
+                        <i class="fas fa-copy"></i>
+                        <span>Copiar Código</span>
+                    </button>
+                    <button class="btn-export" onclick="exportToSite()" title="Exportar JSON">
+                        <i class="fas fa-file-export"></i>
+                        <span>Exportar JSON</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <!-- ========== DASHBOARD ========== -->
+                <div class="page-section active" id="dashboard">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <span class="stat-card-label">Total de Apps</span>
+                                <div class="stat-card-icon blue"><i class="fas fa-mobile-alt"></i></div>
+                            </div>
+                            <div class="stat-card-value" id="dashTotalApps">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <span class="stat-card-label">Total de Jogos</span>
+                                <div class="stat-card-icon orange"><i class="fas fa-gamepad"></i></div>
+                            </div>
+                            <div class="stat-card-value" id="dashTotalGames">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <span class="stat-card-label">Downloads Totais</span>
+                                <div class="stat-card-icon green"><i class="fas fa-download"></i></div>
+                            </div>
+                            <div class="stat-card-value" id="dashTotalDownloads">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-header">
+                                <span class="stat-card-label">Em Destaque</span>
+                                <div class="stat-card-icon red"><i class="fas fa-star"></i></div>
+                            </div>
+                            <div class="stat-card-value" id="dashFeatured">0</div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-clock"></i> Adicionados Recentemente</h2>
+                        </div>
+                        <div style="padding: 0 24px;">
+                            <div id="recentAppsList">
+                                <div class="empty-state" style="padding: 40px 0;">
+                                    <p style="color: var(--text-muted);">Nenhum app cadastrado ainda</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-info-circle"></i> Como Usar</h2>
+                        </div>
+                        <div style="padding: 24px; color: var(--text-secondary); line-height: 2;">
+                            <p><strong>1.</strong> Clique em <strong>"Adicionar App"</strong> no menu ou no botão verde abaixo.</p>
+                            <p><strong>2.</strong> Preencha todos os campos do formulário (os obrigatórios estão marcados).</p>
+                            <p><strong>3.</strong> Adicione os recursos do Mod e screenshots do app.</p>
+                            <p><strong>4.</strong> Clique em <strong>"Salvar App"</strong> — ele será salvo automaticamente.</p>
+                            <p><strong>5.</strong> Clique em <strong>"Copiar Código"</strong> no topo para copiar o banco de dados.</p>
+                            <p><strong>6.</strong> Cole o código no arquivo <code>js/app.js</code> do seu site principal.</p>
+                            <p><strong>7.</strong> Faça upload do site atualizado e pronto!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== GERENCIAR APPS ========== -->
+                <div class="page-section" id="apps">
+                    <div class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-list"></i> Todos os Apps</h2>
+                            <div class="section-actions">
+                                <div class="search-bar">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" id="searchApps" placeholder="Buscar app...">
+                                </div>
+                                <button class="btn btn-primary" onclick="openAddModal()">
+                                    <i class="fas fa-plus"></i> Novo App
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="appsEmptyState" class="empty-state hidden">
+                            <i class="fas fa-box-open"></i>
+                            <h3>Nenhum app cadastrado</h3>
+                            <p>Clique em "Novo App" para começar</p>
+                            <button class="btn btn-primary" onclick="openAddModal()">
+                                <i class="fas fa-plus"></i> Adicionar App
+                            </button>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>App</th>
+                                        <th>Tipo</th>
+                                        <th>Categoria</th>
+                                        <th>Mod</th>
+                                        <th>Avaliação</th>
+                                        <th>Downloads</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="appsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== ADICIONAR APP (redireciona pro modal) ========== -->
+                <div class="page-section" id="add-app">
+                    <div class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-plus-circle"></i> Adicionar Novo App</h2>
+                        </div>
+                        <div style="padding: 40px; text-align: center;">
+                            <i class="fas fa-mobile-alt" style="font-size: 64px; color: var(--border-color); margin-bottom: 20px;"></i>
+                            <h3 style="margin-bottom: 12px;">Abrir Formulário de Cadastro</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 24px;">Clique no botão abaixo para abrir o formulário completo de cadastro de app.</p>
+                            <button class="btn btn-primary" onclick="openAddModal()" style="padding: 14px 32px; font-size: 16px;">
+                                <i class="fas fa-plus"></i> Abrir Formulário
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== CONFIGURAÇÕES ========== -->
+                <div class="page-section" id="settings">
+                    <div class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-cog"></i> Configurações do Site</h2>
+                        </div>
+                        <form id="settingsForm" class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Nome do Site</label>
+                                <input type="text" class="form-input" id="settingSiteName" value="ApkBugado" placeholder="ApkBugado">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Link do Telegram</label>
+                                <input type="url" class="form-input" id="settingTelegram" placeholder="https://t.me/seu_canal">
+                            </div>
+                            <div class="form-group full-width">
+                                <label class="form-label">Descrição do Site</label>
+                                <textarea class="form-textarea" id="settingDescription" placeholder="A melhor plataforma para download de apps e jogos modificados..."></textarea>
+                            </div>
+                            <div class="form-group full-width" style="margin-top: 10px;">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> Salvar Configurações
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header">
+                            <h2 class="section-title"><i class="fas fa-database"></i> Gerenciar Dados</h2>
+                        </div>
+                        <div style="padding: 24px;">
+                            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                                <button class="btn btn-primary" onclick="exportToSite()">
+                                    <i class="fas fa-file-export"></i> Exportar JSON
+                                </button>
+                                <button class="btn btn-secondary" onclick="copyDatabaseCode()">
+                                    <i class="fas fa-copy"></i> Copiar Código JS
+                                </button>
+                                <button class="btn btn-danger" onclick="clearAllData()">
+                                    <i class="fas fa-trash"></i> Limpar Todos os Dados
+                                </button>
+                            </div>
+                            <p style="color: var(--text-muted); margin-top: 16px; font-size: 13px;">
+                                <i class="fas fa-info-circle"></i> Os dados são salvos no navegador (LocalStorage). Exporte regularmente para não perder nada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MODAL ADICIONAR/EDITAR APP ========== -->
+    <div class="modal-overlay" id="appModal">
+        <div class="modal" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Adicionar Novo App</h2>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="appForm">
+                <div class="modal-body">
+                    <div class="form-grid">
+                        <!-- Informações Básicas -->
+                        <div class="form-group full-width">
+                            <h3 style="font-size: 16px; margin-bottom: 16px; color: var(--accent-primary);">
+                                <i class="fas fa-info-circle"></i> Informações Básicas
+                            </h3>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Nome do App <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="appName" required placeholder="Ex: YouTube Premium">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Versão <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="appVersion" required placeholder="Ex: 21.19.286">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Tipo de Mod <span class="required">*</span></label>
+                            <select class="form-select" id="appModType" required>
+                                <option value="Mod">Mod</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Pro">Pro</option>
+                                <option value="Plus">Plus</option>
+                                <option value="VIP">VIP</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Desenvolvedor <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="appDeveloper" required placeholder="Ex: Google LLC">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Categoria <span class="required">*</span></label>
+                            <select class="form-select" id="appCategory" required>
+                                <option value="">Selecione...</option>
+                                <option value="Entretenimento">Entretenimento</option>
+                                <option value="Música">Música</option>
+                                <option value="Educação">Educação</option>
+                                <option value="Aventura">Aventura</option>
+                                <option value="Ação">Ação</option>
+                                <option value="Ferramentas">Ferramentas</option>
+                                <option value="Social">Social</option>
+                                <option value="Fotografia">Fotografia</option>
+                                <option value="Esportes">Esportes</option>
+                                <option value="Estratégia">Estratégia</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Tipo <span class="required">*</span></label>
+                            <select class="form-select" id="appType" required>
+                                <option value="app">Aplicativo</option>
+                                <option value="game">Jogo</option>
+                            </select>
+                        </div>
+
+                        <!-- Detalhes Técnicos -->
+                        <div class="form-group full-width">
+                            <h3 style="font-size: 16px; margin: 24px 0 16px; color: var(--accent-primary);">
+                                <i class="fas fa-wrench"></i> Detalhes Técnicos
+                            </h3>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Tamanho <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="appSize" required placeholder="Ex: 108.09 MB">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Data de Atualização <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="appUpdateDate" required placeholder="Ex: 7 de maio de 2026">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Requisitos</label>
+                            <input type="text" class="form-input" id="appRequirements" placeholder="Ex: Android 8.0+">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Avaliação (0-5)</label>
+                            <input type="number" class="form-input" id="appRating" min="0" max="5" step="0.1" value="4.5" placeholder="4.5">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Número de Votos</label>
+                            <input type="number" class="form-input" id="appVotes" value="0" placeholder="100000">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Downloads</label>
+                            <input type="number" class="form-input" id="appDownloads" value="0" placeholder="500000">
+                        </div>
+
+                        <!-- Links -->
+                        <div class="form-group full-width">
+                            <h3 style="font-size: 16px; margin: 24px 0 16px; color: var(--accent-primary);">
+                                <i class="fas fa-link"></i> Links
+                            </h3>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label class="form-label">URL do Ícone <span class="required">*</span></label>
+                            <input type="url" class="form-input" id="appIcon" required placeholder="https://..." onchange="previewIcon()">
+                            <div class="image-preview-container" id="iconPreview" style="margin-top: 8px;"></div>
+                            <p class="form-hint">Cole o link direto da imagem (PNG, JPG, SVG)</p>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label class="form-label">URL de Download do APK</label>
+                            <input type="url" class="form-input" id="appDownloadUrl" placeholder="https://...">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label class="form-label">URL do Telegram</label>
+                            <input type="url" class="form-input" id="appTelegramUrl" placeholder="https://t.me/seu_canal">
+                        </div>
+
+                        <!-- Screenshots -->
+                        <div class="form-group full-width">
+                            <h3 style="font-size: 16px; margin: 24px 0 16px; color: var(--accent-primary);">
+                                <i class="fas fa-images"></i> Screenshots
+                            </h3>
+                            <div style="display: flex; gap: 12px; align-items: flex-start;">
+                                <input type="url" class="form-input" id="screenshotInput" placeholder="URL da screenshot..." style="flex: 1;">
+                                <button type="button" class="btn btn-secondary" onclick="addScreenshot()">
+                                    <i class="fas fa-plus"></i> Adicionar
+                                </button>
+                            </div>
+                            <div class="image-preview-container" id="screenshotsPreview"></div>
+                        </div>
+
+                        <!-- Descrição -->
+                        <div class="form-group full-width">
+                            <h3 style="font-size: 16px; margin: 24px 0 16px; color: var(--accent-primary);">
+                                <i class="fas fa-align-left"></i> Descrição
+                            </h3>
+                            <textarea class="form-textarea" id="appDescription" rows="4" placeholder="Descreva o app, suas funcionalidades e o que o mod oferece..."></textarea>
+                        </div>
+
+                        <!-- Recursos do Mod -->
+                        <div class="form-group full-width">
+                            <h3 style="font-size: 16px; margin: 24px 0 16px; color: var(--accent-primary);">
+                                <i class="fas fa-magic"></i> Recursos do Mod
+                            </h3>
+                            <div style="display: flex; gap: 12px; align-items: flex-start;">
+                                <input type="text" class="form-input" id="featureInput" placeholder="Ex: Sem anúncios" style="flex: 1;">
+                                <button type="button" class="btn btn-secondary" onclick="addFeature()">
+                                    <i class="fas fa-plus"></i> Adicionar
+                                </button>
+                            </div>
+                            <div class="tags-input-container" id="featuresTags" style="margin-top: 12px;"></div>
+                            <p class="form-hint">Pressione Enter ou clique em Adicionar para incluir cada recurso</p>
+                        </div>
+
+                        <!-- Opções -->
+                        <div class="form-group full-width">
+                            <h3 style="font-size: 16px; margin: 24px 0 16px; color: var(--accent-primary);">
+                                <i class="fas fa-sliders-h"></i> Opções de Exibição
+                            </h3>
+                            <div class="toggle-group">
+                                <label class="toggle-item">
+                                    <input type="checkbox" id="appFeatured">
+                                    <div class="toggle-switch"></div>
+                                    <span class="toggle-label">Destacar na Home</span>
+                                </label>
+                                <label class="toggle-item">
+                                    <input type="checkbox" id="appPopular">
+                                    <div class="toggle-switch"></div>
+                                    <span class="toggle-label">Marcar como Popular</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Salvar App
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

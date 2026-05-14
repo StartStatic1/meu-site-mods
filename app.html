@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do App - StreamFlix Mods</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+                <span class="logo-text">StreamFlix<span class="logo-highlight">Mods</span></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav" id="mainNav">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a>
+                <a href="index.html#apps" class="nav-link"><i class="fas fa-th-large"></i> Apps</a>
+                <a href="index.html#games" class="nav-link"><i class="fas fa-gamepad"></i> Jogos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main app-detail-page">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb" id="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span id="bcCategory">Apps</span>
+                <i class="fas fa-chevron-right"></i>
+                <span id="bcAppName">App Name</span>
+            </div>
+
+            <!-- App Header -->
+            <div class="app-header-detail" id="appHeader">
+                <div class="app-icon-large">
+                    <img src="" alt="" id="detailIcon">
+                </div>
+                <div class="app-header-info">
+                    <h1 id="detailName">App Name</h1>
+                    <p class="app-version" id="detailVersion">v1.0.0 (Mod)</p>
+                    <span class="app-category-badge" id="detailCategory">Categoria</span>
+                    <div class="app-rating-large">
+                        <div class="stars" id="detailStars"></div>
+                        <span class="rating-number" id="detailRating">4.5</span>
+                        <span class="votes" id="detailVotes">(1,234 votos)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="app-actions">
+                <a href="#" class="btn btn-primary btn-large" id="downloadBtn">
+                    <i class="fas fa-download"></i> DESCARGAR APK
+                </a>
+                <a href="#" class="btn btn-telegram btn-large" id="telegramBtn" target="_blank">
+                    <i class="fab fa-telegram"></i> TELEGRAM
+                </a>
+            </div>
+
+            <!-- App Info Grid -->
+            <div class="app-info-grid">
+                <div class="info-card">
+                    <i class="fas fa-building"></i>
+                    <div>
+                        <span class="info-label">Desarrollador</span>
+                        <span class="info-value" id="infoDev">Developer</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <span class="info-label">Actualización</span>
+                        <span class="info-value" id="infoUpdate">Date</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-hdd"></i>
+                    <div>
+                        <span class="info-label">Tamaño</span>
+                        <span class="info-value" id="infoSize">0 MB</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-code-branch"></i>
+                    <div>
+                        <span class="info-label">Versión</span>
+                        <span class="info-value" id="infoVersion">1.0.0</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fab fa-android"></i>
+                    <div>
+                        <span class="info-label">Requerimientos</span>
+                        <span class="info-value" id="infoReq">Android 8.0+</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <span class="info-label">Seguridad</span>
+                        <span class="info-value verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshots -->
+            <section class="screenshots-section">
+                <h3><i class="fas fa-images"></i> Capturas de Pantalla</h3>
+                <div class="screenshots-scroll" id="screenshotsScroll">
+                    <!-- Gerado via JS -->
+                </div>
+            </section>
+
+            <!-- Description -->
+            <section class="description-section">
+                <h3><i class="fas fa-align-left"></i> Descripción</h3>
+                <div class="description-content" id="descriptionContent">
+                    <!-- Gerado via JS -->
+                </div>
+            </section>
+
+            <!-- Mod Info -->
+            <section class="mod-info-section">
+                <h3><i class="fas fa-magic"></i> Información del Mod</h3>
+                <div class="mod-features" id="modFeatures">
+                    <!-- Gerado via JS -->
+                </div>
+            </section>
+
+            <!-- Related Apps -->
+            <section class="related-section">
+                <h3><i class="fas fa-thumbs-up"></i> Relacionados</h3>
+                <div class="apps-grid" id="relatedApps">
+                    <!-- Gerado via JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 StreamFlix Mods. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

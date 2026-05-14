@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApkBugado Mods - Apps e Jogos Modificados</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <span class="logo-text">StreamFlix<span class="logo-highlight">Mods</span></span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav" id="mainNav">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Início</a>
+                <a href="#apps" class="nav-link"><i class="fas fa-th-large"></i> Apps</a>
+                <a href="#games" class="nav-link"><i class="fas fa-gamepad"></i> Jogos</a>
+                <a href="#popular" class="nav-link"><i class="fas fa-fire"></i> Popular</a>
+                <a href="https://t.me/seu_canal" class="nav-link telegram" target="_blank">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar aplicativo ou jogo...">
+                <button class="search-btn" onclick="searchApps()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            
+            <!-- Hero Banner -->
+            <section class="hero" id="home">
+                <div class="hero-content">
+                    <h1>Os Melhores Apps e Jogos <span class="highlight">Modificados</span></h1>
+                    <p>Download seguro e rápido dos seus aplicativos favoritos com recursos premium desbloqueados.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="totalApps">0</span>
+                            <span class="stat-label">Apps</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="totalGames">0</span>
+                            <span class="stat-label">Jogos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="totalDownloads">0</span>
+                            <span class="stat-label">Downloads</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="categories">
+                <h2 class="section-title"><i class="fas fa-layer-group"></i> Categorias</h2>
+                <div class="category-grid" id="categoryGrid">
+                    <!-- Gerado via JS -->
+                </div>
+            </section>
+
+            <!-- Featured Apps -->
+            <section class="apps-section" id="apps">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-star"></i> Apps em Destaque</h2>
+                    <a href="#" class="view-more" onclick="filterByType('app')">Ver todos <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="apps-grid" id="featuredApps">
+                    <!-- Gerado via JS -->
+                </div>
+            </section>
+
+            <!-- Games -->
+            <section class="apps-section" id="games">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-gamepad"></i> Jogos Populares</h2>
+                    <a href="#" class="view-more" onclick="filterByType('game')">Ver todos <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="apps-grid" id="gamesGrid">
+                    <!-- Gerado via JS -->
+                </div>
+            </section>
+
+            <!-- Popular -->
+            <section class="apps-section" id="popular">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-fire-alt"></i> Mais Baixados</h2>
+                </div>
+                <div class="apps-grid" id="popularGrid">
+                    <!-- Gerado via JS -->
+                </div>
+            </section>
+
+            <!-- Collections -->
+            <section class="collections-section">
+                <h2 class="section-title"><i class="fas fa-th-large"></i> Coleções</h2>
+                <div class="collections-grid" id="collectionsGrid">
+                    <!-- Gerado via JS -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+                        <span class="logo-text">StreamFlix<span class="logo-highlight">Mods</span></span>
+                    </div>
+                    <p>A melhor plataforma para download de apps e jogos modificados de forma segura.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Úteis</h4>
+                    <a href="#">Como Instalar</a>
+                    <a href="#">DMCA</a>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Categorias</h4>
+                    <a href="#">Apps</a>
+                    <a href="#">Jogos</a>
+                    <a href="#">Entretenimento</a>
+                    <a href="#">Ferramentas</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StreamFlix Mods. Todos os direitos reservados.</p>
+                <button class="scroll-top" onclick="scrollToTop()">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Nav (Mobile) -->
+    <nav class="bottom-nav">
+        <a href="#home" class="bottom-link active">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </a>
+        <a href="#apps" class="bottom-link">
+            <i class="fas fa-th-large"></i>
+            <span>Apps</span>
+        </a>
+        <a href="#games" class="bottom-link">
+            <i class="fas fa-gamepad"></i>
+            <span>Jogos</span>
+        </a>
+        <a href="#popular" class="bottom-link">
+            <i class="fas fa-fire"></i>
+            <span>Popular</span>
+        </a>
+        <a href="https://t.me/seu_canal" class="bottom-link" target="_blank">
+            <i class="fab fa-telegram"></i>
+            <span>Telegram</span>
+        </a>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

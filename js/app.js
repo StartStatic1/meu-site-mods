@@ -1,5 +1,5 @@
 // ============================================
-// BASE DE DADOS DE APPS (AQUI VOCÊ CADASTRA!)
+// BASE DE DADOS DE APKS (AQUI VOCÊ CADASTRA!)
 // ============================================
 
 const appsDatabase = [
@@ -9,10 +9,10 @@ const appsDatabase = [
         version: "21.19.286",
         modType: "Mod",
         developer: "Google LLC",
-        category: "Entretenimiento",
+        category: "Entretenimento",
         type: "app",
         size: "108.09 MB",
-        updateDate: "7 de mayo de 2026",
+        updateDate: "7 de maio de 2026",
         requirements: "Android 8.0+",
         rating: 4.7,
         votes: 2289282,
@@ -25,14 +25,14 @@ const appsDatabase = [
         ],
         downloadUrl: "https://seu-link-de-download.com/youtube.apk",
         telegramUrl: "https://t.me/seu_canal",
-        description: "YouTube Premium Mod te permite disfrutar de todas las funciones premium de YouTube sin costo alguno. Reproduce videos en segundo plano, descarga contenido para ver offline y disfruta de una experiencia sin anuncios.",
+        description: "YouTube Premium Mod permite aproveitar todos os recursos premium do YouTube sem custo algum. Reproduza vídeos em segundo plano, baixe conteúdo para assistir offline e aproveite uma experiência sem anúncios.",
         modFeatures: [
-            "Sin anuncios (Ad-Free)",
-            "Reproducción en segundo plano",
-            "Descargas offline ilimitadas",
-            "YouTube Music incluido",
-            "Calidad 4K disponible",
-            "Picture-in-Picture activado"
+            "Sem anúncios (Ad-Free)",
+            "Reprodução em segundo plano",
+            "Downloads offline ilimitados",
+            "YouTube Music incluído",
+            "Qualidade 4K disponível",
+            "Picture-in-Picture ativado"
         ],
         featured: true,
         popular: true
@@ -46,7 +46,7 @@ const appsDatabase = [
         category: "Música",
         type: "app",
         size: "75.4 MB",
-        updateDate: "10 de mayo de 2026",
+        updateDate: "10 de maio de 2026",
         requirements: "Android 7.0+",
         rating: 4.8,
         votes: 1543200,
@@ -58,14 +58,14 @@ const appsDatabase = [
         ],
         downloadUrl: "https://seu-link-de-download.com/spotify.apk",
         telegramUrl: "https://t.me/seu_canal",
-        description: "Spotify Premium Mod con todas las funciones desbloqueadas. Escucha música sin anuncios, saltos ilimitados y calidad extrema.",
+        description: "Spotify Premium Mod com todos os recursos desbloqueados. Ouça música sem anúncios, pulos ilimitados e qualidade extrema.",
         modFeatures: [
-            "Sin anuncios de audio",
-            "Saltos ilimitados",
-            "Calidad extrema desbloqueada",
-            "Descargas offline",
+            "Sem anúncios de áudio",
+            "Pulos ilimitados",
+            "Qualidade extrema desbloqueada",
+            "Downloads offline",
             "Modo offline ilimitado",
-            "Spotify Connect disponible"
+            "Spotify Connect disponível"
         ],
         featured: true,
         popular: true
@@ -76,10 +76,10 @@ const appsDatabase = [
         version: "8.125.0",
         modType: "Mod",
         developer: "Netflix Inc",
-        category: "Entretenimiento",
+        category: "Entretenimento",
         type: "app",
         size: "65.2 MB",
-        updateDate: "5 de mayo de 2026",
+        updateDate: "5 de maio de 2026",
         requirements: "Android 8.0+",
         rating: 4.6,
         votes: 987654,
@@ -91,14 +91,14 @@ const appsDatabase = [
         ],
         downloadUrl: "https://seu-link-de-download.com/netflix.apk",
         telegramUrl: "https://t.me/seu_canal",
-        description: "Netflix Premium con acceso a todo el contenido sin restricciones regionales.",
+        description: "Netflix Premium com acesso a todo o conteúdo sem restrições regionais.",
         modFeatures: [
-            "4K UHD disponible",
-            "Sin restricciones regionales",
-            "Múltiples perfiles",
-            "Descargas ilimitadas",
-            "Sin anuncios",
-            "Contenido Premium desbloqueado"
+            "4K UHD disponível",
+            "Sem restrições regionais",
+            "Múltiplos perfis",
+            "Downloads ilimitados",
+            "Sem anúncios",
+            "Conteúdo Premium desbloqueado"
         ],
         featured: true,
         popular: true
@@ -112,7 +112,7 @@ const appsDatabase = [
         category: "Aventura",
         type: "game",
         size: "180.5 MB",
-        updateDate: "12 de mayo de 2026",
+        updateDate: "12 de maio de 2026",
         requirements: "Android 8.0+",
         rating: 4.9,
         votes: 3456789,
@@ -124,14 +124,14 @@ const appsDatabase = [
         ],
         downloadUrl: "https://seu-link-de-download.com/minecraft.apk",
         telegramUrl: "https://t.me/seu_canal",
-        description: "Minecraft completo con texturas y skins desbloqueadas. Modo creativo y supervivencia ilimitado.",
+        description: "Minecraft completo com texturas e skins desbloqueadas. Modo criativo e sobrevivência ilimitado.",
         modFeatures: [
             "Texturas premium desbloqueadas",
             "Skins ilimitadas",
             "Mundos personalizados",
             "Mods integrados",
             "Multiplayer funcionando",
-            "Sin licencia requerida"
+            "Sem licença necessária"
         ],
         featured: true,
         popular: true
@@ -142,10 +142,10 @@ const appsDatabase = [
         version: "2.11.32",
         modType: "Mod",
         developer: "Rockstar Games",
-        category: "Acción",
+        category: "Ação",
         type: "game",
         size: "2.4 GB",
-        updateDate: "1 de mayo de 2026",
+        updateDate: "1 de maio de 2026",
         requirements: "Android 9.0+",
         rating: 4.8,
         votes: 2100000,
@@ -157,12 +157,12 @@ const appsDatabase = [
         ],
         downloadUrl: "https://seu-link-de-download.com/gta.apk",
         telegramUrl: "https://t.me/seu_canal",
-        description: "GTA San Andreas con mods de gráficos HD, dinero infinito y autos desbloqueados.",
+        description: "GTA San Andreas com mods de gráficos HD, dinheiro infinito e carros desbloqueados.",
         modFeatures: [
-            "Dinero infinito",
-            "Autos y armas desbloqueadas",
-            "Gráficos HD mejorados",
-            "Misiones completadas",
+            "Dinheiro infinito",
+            "Carros e armas desbloqueadas",
+            "Gráficos HD melhorados",
+            "Missões completadas",
             "Mapa completo desbloqueado",
             "Cheat menu integrado"
         ],
@@ -175,10 +175,10 @@ const appsDatabase = [
         version: "6.78.4",
         modType: "Mod",
         developer: "Duolingo",
-        category: "Educación",
+        category: "Educação",
         type: "app",
         size: "45.3 MB",
-        updateDate: "12 de mayo de 2026",
+        updateDate: "12 de maio de 2026",
         requirements: "Android 7.0+",
         rating: 4.5,
         votes: 890000,
@@ -189,14 +189,14 @@ const appsDatabase = [
         ],
         downloadUrl: "https://seu-link-de-download.com/duolingo.apk",
         telegramUrl: "https://t.me/seu_canal",
-        description: "Aprende idiomas sin límites con Duolingo Plus. Sin anuncios y con funciones premium.",
+        description: "Aprenda idiomas sem limites com Duolingo Plus. Sem anúncios e com funções premium.",
         modFeatures: [
-            "Sin anuncios",
+            "Sem anúncios",
             "Vidas ilimitadas",
-            "Funciones Plus desbloqueadas",
-            "Descargas offline",
-            "Progreso ilimitado",
-            "Todos los idiomas disponibles"
+            "Funções Plus desbloqueadas",
+            "Downloads offline",
+            "Progresso ilimitado",
+            "Todos os idiomas disponíveis"
         ],
         featured: true,
         popular: false
@@ -207,10 +207,10 @@ const appsDatabase = [
         version: "3.162.1",
         modType: "Mod",
         developer: "Books Made Easy",
-        category: "Educación",
+        category: "Educação",
         type: "app",
         size: "32.1 MB",
-        updateDate: "14 de mayo de 2026",
+        updateDate: "14 de maio de 2026",
         requirements: "Android 7.0+",
         rating: 4.3,
         votes: 456000,
@@ -221,13 +221,13 @@ const appsDatabase = [
         ],
         downloadUrl: "https://seu-link-de-download.com/headway.apk",
         telegramUrl: "https://t.me/seu_canal",
-        description: "Resúmenes de libros premium desbloqueados. Aprende más en menos tiempo.",
+        description: "Resumos de livros premium desbloqueados. Aprenda mais em menos tempo.",
         modFeatures: [
-            "Todos los resúmenes desbloqueados",
-            "Audio disponible",
-            "Sin anuncios",
-            "Descargas ilimitadas",
-            "Funciones premium activas"
+            "Todos os resumos desbloqueados",
+            "Áudio disponível",
+            "Sem anúncios",
+            "Downloads ilimitados",
+            "Funções premium ativas"
         ],
         featured: true,
         popular: false
@@ -241,7 +241,7 @@ const appsDatabase = [
         category: "Música",
         type: "app",
         size: "120 MB",
-        updateDate: "9 de mayo de 2026",
+        updateDate: "9 de maio de 2026",
         requirements: "Android 8.0+",
         rating: 4.6,
         votes: 320000,
@@ -252,13 +252,13 @@ const appsDatabase = [
         ],
         downloadUrl: "https://seu-link-de-download.com/guitar.apk",
         telegramUrl: "https://t.me/seu_canal",
-        description: "Aprende guitarra con lecciones premium desbloqueadas.",
+        description: "Aprenda violão com lições premium desbloqueadas.",
         modFeatures: [
-            "Todas las lecciones desbloqueadas",
-            "Sin anuncios",
+            "Todas as lições desbloqueadas",
+            "Sem anúncios",
             "Afinador premium",
-            "Canciones ilimitadas",
-            "Progreso guardado"
+            "Músicas ilimitadas",
+            "Progresso salvo"
         ],
         featured: true,
         popular: false
@@ -271,11 +271,11 @@ const appsDatabase = [
 
 const categories = [
     { id: "all", name: "Todos", icon: "fa-th-large" },
-    { id: "Entretenimiento", name: "Entretenimiento", icon: "fa-play-circle" },
+    { id: "Entretenimento", name: "Entretenimento", icon: "fa-play-circle" },
     { id: "Música", name: "Música", icon: "fa-music" },
-    { id: "Educación", name: "Educación", icon: "fa-graduation-cap" },
+    { id: "Educação", name: "Educação", icon: "fa-graduation-cap" },
     { id: "Aventura", name: "Aventura", icon: "fa-mountain" },
-    { id: "Acción", name: "Acción", icon: "fa-fist-raised" },
+    { id: "Ação", name: "Ação", icon: "fa-fist-raised" },
     { id: "Ferramentas", name: "Ferramentas", icon: "fa-tools" }
 ];
 
@@ -362,7 +362,7 @@ function getAppById(id) {
 function renderCategories() {
     const grid = document.getElementById('categoryGrid');
     if (!grid) return;
-    
+
     grid.innerHTML = categories.map(cat => `
         <div class="category-card" onclick="filterByCategory('${cat.id}')">
             <i class="fas ${cat.icon}"></i>
@@ -403,7 +403,7 @@ function renderAppsGrid(containerId, apps) {
 function renderCollections() {
     const grid = document.getElementById('collectionsGrid');
     if (!grid) return;
-    
+
     grid.innerHTML = collections.map(col => `
         <div class="collection-card" onclick="openCollection('${col.id}')">
             <img src="${col.bgImage}" alt="${col.title}" class="collection-bg">
@@ -414,7 +414,7 @@ function renderCollections() {
                         const app = getAppById(appId);
                         return app ? `<img src="${app.icon}" alt="${app.name}">` : '';
                     }).join('')}
-                    <span class="collection-count">+${col.count} more</span>
+                    <span class="collection-count">+${col.count} mais</span>
                 </div>
             </div>
         </div>
@@ -425,11 +425,11 @@ function updateStats() {
     const totalApps = appsDatabase.filter(a => a.type === 'app').length;
     const totalGames = appsDatabase.filter(a => a.type === 'game').length;
     const totalDownloads = appsDatabase.reduce((sum, a) => sum + a.downloads, 0);
-    
+
     const appsEl = document.getElementById('totalApps');
     const gamesEl = document.getElementById('totalGames');
     const downloadsEl = document.getElementById('totalDownloads');
-    
+
     if (appsEl) appsEl.textContent = totalApps;
     if (gamesEl) gamesEl.textContent = totalGames;
     if (downloadsEl) downloadsEl.textContent = formatNumber(totalDownloads);
@@ -445,7 +445,7 @@ function filterByCategory(categoryId) {
         renderAppsGrid('gamesGrid', getFeaturedGames());
         return;
     }
-    
+
     const filtered = appsDatabase.filter(app => app.category === categoryId);
     renderAppsGrid('featuredApps', filtered.filter(a => a.type === 'app'));
     renderAppsGrid('gamesGrid', filtered.filter(a => a.type === 'game'));
@@ -464,13 +464,13 @@ function searchApps() {
         initHome();
         return;
     }
-    
+
     const filtered = appsDatabase.filter(app => 
         app.name.toLowerCase().includes(query) ||
         app.developer.toLowerCase().includes(query) ||
         app.category.toLowerCase().includes(query)
     );
-    
+
     renderAppsGrid('featuredApps', filtered);
     renderAppsGrid('gamesGrid', []);
     renderAppsGrid('popularGrid', []);
@@ -483,18 +483,18 @@ function searchApps() {
 function initAppDetail() {
     const urlParams = new URLSearchParams(window.location.search);
     const appId = urlParams.get('id');
-    
+
     if (!appId) {
         window.location.href = 'index.html';
         return;
     }
-    
+
     const app = getAppById(appId);
     if (!app) {
         window.location.href = 'index.html';
         return;
     }
-    
+
     // Preencher dados
     document.getElementById('bcAppName').textContent = app.name;
     document.getElementById('bcCategory').textContent = app.category;
@@ -504,25 +504,25 @@ function initAppDetail() {
     document.getElementById('detailStars').innerHTML = generateStars(app.rating);
     document.getElementById('detailRating').textContent = app.rating;
     document.getElementById('detailVotes').textContent = `(${formatNumber(app.votes)} votos)`;
-    
+
     const iconImg = document.getElementById('detailIcon');
     iconImg.src = app.icon;
     iconImg.alt = app.name;
     iconImg.onerror = function() {
         this.src = `https://via.placeholder.com/150x150/1a1a2e/00d26a?text=${app.name.charAt(0)}`;
     };
-    
+
     // Info cards
     document.getElementById('infoDev').textContent = app.developer;
     document.getElementById('infoUpdate').textContent = app.updateDate;
     document.getElementById('infoSize').textContent = app.size;
     document.getElementById('infoVersion').textContent = app.version;
     document.getElementById('infoReq').textContent = app.requirements;
-    
+
     // Botões
     document.getElementById('downloadBtn').href = app.downloadUrl;
     document.getElementById('telegramBtn').href = app.telegramUrl;
-    
+
     // Screenshots
     const screenshotsContainer = document.getElementById('screenshotsScroll');
     if (screenshotsContainer) {
@@ -532,13 +532,13 @@ function initAppDetail() {
             </div>
         `).join('');
     }
-    
+
     // Descrição
     const descContainer = document.getElementById('descriptionContent');
     if (descContainer) {
         descContainer.innerHTML = `<p>${app.description}</p>`;
     }
-    
+
     // Mod features
     const modContainer = document.getElementById('modFeatures');
     if (modContainer) {
@@ -549,7 +549,7 @@ function initAppDetail() {
             </div>
         `).join('');
     }
-    
+
     // Related apps (mesma categoria)
     const related = appsDatabase.filter(a => a.category === app.category && a.id !== app.id).slice(0, 4);
     renderAppsGrid('relatedApps', related);
@@ -577,7 +577,7 @@ function init() {
             mainNav.classList.toggle('active');
         });
     }
-    
+
     // Search on Enter
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
@@ -585,7 +585,7 @@ function init() {
             if (e.key === 'Enter') searchApps();
         });
     }
-    
+
     // Detectar página
     if (document.body.classList.contains('app-detail-page') || document.querySelector('.app-detail-page')) {
         initAppDetail();

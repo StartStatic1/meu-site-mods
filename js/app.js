@@ -3,39 +3,64 @@
 // ============================================
 
 const appsDatabase = [
+const appsDatabase = [
     {
-        id: "youtube-premium",
-        name: "YouTube Premium",
-        version: "21.19.286",
-        modType: "Mod",
-        developer: "Google LLC",
-        category: "Entretenimento",
-        type: "app",
-        size: "108.09 MB",
-        updateDate: "7 de maio de 2026",
-        requirements: "Android 8.0+",
-        rating: 4.7,
-        votes: 2289282,
-        downloads: 5000000,
-        icon: "https://upload.wikimedia.org/wikipedia/commons/4/4f/YouTube_social_white_squircle.svg",
-        screenshots: [
-            "https://via.placeholder.com/280x500/1a1a2e/00d26a?text=Screenshot+1",
-            "https://via.placeholder.com/280x500/1a1a2e/00d26a?text=Screenshot+2",
-            "https://via.placeholder.com/280x500/1a1a2e/00d26a?text=Screenshot+3"
-        ],
-        downloadUrl: "https://seu-link-de-download.com/youtube.apk",
-        telegramUrl: "https://t.me/seu_canal",
-        description: "YouTube Premium Mod permite aproveitar todos os recursos premium do YouTube sem custo algum. Reproduza vídeos em segundo plano, baixe conteúdo para assistir offline e aproveite uma experiência sem anúncios.",
-        modFeatures: [
-            "Sem anúncios (Ad-Free)",
+        "id": "youtube-premium",
+        "name": "YouTube Premium",
+        "version": "21.19.286",
+        "modType": "Mod",
+        "developer": "Google LLC",
+        "category": "Entretenimento",
+        "type": "app",
+        "size": "108.09 MB",
+        "updateDate": "7 de maio de 2026",
+        "requirements": "Android 8.0+",
+        "rating": 4.7,
+        "votes": 2289282,
+        "downloads": 5000000,
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4f/YouTube_social_white_squircle.svg",
+        "screenshots": [],
+        "downloadUrl": "",
+        "telegramUrl": "",
+        "description": "YouTube Premium Mod permite aproveitar todos os recursos premium do YouTube sem custo algum.",
+        "modFeatures": [
+            "Sem anúncios",
             "Reprodução em segundo plano",
-            "Downloads offline ilimitados",
-            "YouTube Music incluído",
-            "Qualidade 4K disponível",
-            "Picture-in-Picture ativado"
+            "Downloads offline"
         ],
-        featured: true,
-        popular: true
+        "featured": true,
+        "popular": true
+    },
+    {
+        "id": "greentuber-premium",
+        "name": "GreenTuber Premium",
+        "version": "v0.1.8.9",
+        "modType": "Mod",
+        "developer": "Maxsortube",
+        "category": "Entretenimento",
+        "type": "app",
+        "size": "15,57 MB",
+        "updateDate": "4 de maio de 2026",
+        "requirements": "Android 6.0+",
+        "rating": 4.8,
+        "votes": 20,
+        "downloads": 10,
+        "icon": "https://share.google/aVEks3MV5I4psuetT",
+        "screenshots": [
+            "https://play-lh.googleusercontent.com/JGwXrB78JnNqXm_T4IUJdcoXNVJVZ9DBuAUrmj-7qeGx0gtf8ODIqhpgOwdIjGTasg=w526-h296-rw",
+            "https://liteapks.com/wp-content/uploads/2024/01/greentuber-block-ads-on-videos-2.webp",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYSRisH3LhI0cTY8eiWkV4U2SzRBTgY1S9LXBRS--iNrSfm6enMku7CGOk&s=10"
+        ],
+        "downloadUrl": "http://bgdv.online/9wmfgc",
+        "telegramUrl": "https://t.me/ApkBugado",
+        "description": "GreenTuber bloqueia anúncios e permite assistir a vídeos em segundo plano\n\nO bloqueador de anúncios GreenTuber garantirá que você esqueça os anúncios irritantes enquanto assiste a vídeos. Instale o aplicativo GreenTuber e nada mais o distrairá de assistir conteúdo de vídeo do recurso de vídeo mais popular, porque todos os anúncios em vídeo e pop-ups serão bloqueados automaticamente pelo aplicativo ! Com este aplicativo, você terá uma experiência completamente nova e muito mais agradável ao assistir a vídeos do Tube!\n\nSe você deseja reprodução de vídeo suave e de boa qualidade, incluindo reprodução em segundo plano, sem interrompendo o conteúdo do vídeo, GreenTuber é o que você precisa.\nAfinal, é o GreenTuber que permitirá que você aproveite os benefícios da versão premium gratuitamente e ao máximo: veja vídeos de forma conveniente !\n\nVale a pena instalar o GreenTuber porque:\n\nÉ como a versão premium, mas gratuita \nGraças ao bloqueio de anúncios eficaz, você terá uma experiência de usuário completamente diferente quando os vídeos forem reproduzidos sem parar: eles não são interrompidos ou interrompidos por vídeos e mensagens de publicidade irritantes.\n\nBloqueia todos os tipos de anúncios! O aplicativo contém um bloqueador de anúncios em vídeo integrado, bem como um bloqueador de pop-ups. Você não precisará mais esperar os comerciais terminarem e clicar em pequenos botões para continuar assistindo ao vídeo em que está interessado. Você ignorará anúncios automaticamente como se não houvesse nenhum.\n\nReproduz vídeo em segundo plano Assistir a vídeos em segundo plano é muito conveniente. E a GreenTuber vai te dar essa oportunidade. Você poderá usar outros aplicativos em seu dispositivo Android sem interromper a reprodução de vídeo do Tube: verifique e-mails, converse em mensageiros (Whatsapp, Telegram e outros), jogue seus jogos favoritos...\n\nPlayer de vídeo flutuante \nPara tornar a experiência do usuário ainda mais conveniente, o GreenTuber possui um recurso para reproduzir o vídeo de seu interesse em um modo de janela pop-up flutuante. Você pode escolher o formato de visualização de vídeo mais conveniente para você: no formato de tela cheia ou na forma de uma janela pop-up que ocupa apenas parte da tela do telefone.\n\nVídeo de alta resolução \nVocê pode escolher qualquer resolução para reprodução de vídeo: de 144p até 8K, dependendo de suas necessidades e da qualidade de sua conexão com a Internet.\n\nTudo o que você precisa em um aplicativo \nUsar o aplicativo multifuncional GreenTuber é muito conveniente! Você não precisa instalar nenhum software adicional ou pagar por uma versão premium cara. Basta instalar o bloqueador de anúncios GreenTuber e você terá acesso a absolutamente todos os recursos que tornam a visualização de vídeos do Tube o mais agradável e conveniente possível!",
+        "modFeatures": [
+            "Sem anúncios, Premium desbloqueado"
+        ],
+        "featured": true,
+        "popular": true
+    }
+];
     },
     {
         id: "spotify-premium",

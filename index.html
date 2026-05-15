@@ -28,7 +28,7 @@
                 <a href="#apps" class="nav-link"><i class="fas fa-th-large"></i> Apps</a>
                 <a href="#games" class="nav-link"><i class="fas fa-gamepad"></i> Jogos</a>
                 <a href="#popular" class="nav-link"><i class="fas fa-fire"></i> Popular</a>
-                <a href="https://t.me/seu_canal" class="nav-link telegram" target="_blank">
+                <a href="https://t.me/ApkBugado" class="nav-link telegram" target="_blank">
                     <i class="fab fa-telegram"></i> Telegram
                 </a>
             </nav>
@@ -85,7 +85,7 @@
             <section class="apps-section" id="apps">
                 <div class="section-header">
                     <h2 class="section-title"><i class="fas fa-star"></i> Apps em Destaque</h2>
-                    <a href="#" class="view-more" onclick="filterByType('app')">Ver todos <i class="fas fa-arrow-right"></i></a>
+                    <a href="#apps" class="view-more" onclick="filterByType('app')">Ver todos <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="apps-grid" id="featuredApps">
                     <!-- Gerado via JS -->
@@ -96,7 +96,7 @@
             <section class="apps-section" id="games">
                 <div class="section-header">
                     <h2 class="section-title"><i class="fas fa-gamepad"></i> Jogos Populares</h2>
-                    <a href="#" class="view-more" onclick="filterByType('game')">Ver todos <i class="fas fa-arrow-right"></i></a>
+                    <a href="#games" class="view-more" onclick="filterByType('game')">Ver todos <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="apps-grid" id="gamesGrid">
                     <!-- Gerado via JS -->
@@ -135,24 +135,22 @@
                     </div>
                     <p>A melhor plataforma para download de apps e jogos modificados de forma segura.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://t.me/ApkBugado" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Links Úteis</h4>
-                    <a href="#">Como Instalar</a>
-                    <a href="#">DMCA</a>
-                    <a href="#">Aviso Legal</a>
-                    <a href="#">Política de Cookies</a>
+                    <h4>Navegação</h4>
+                    <a href="#home">Início</a>
+                    <a href="#apps">Apps</a>
+                    <a href="#games">Jogos</a>
+                    <a href="#popular">Mais Baixados</a>
                 </div>
                 <div class="footer-links">
                     <h4>Categorias</h4>
-                    <a href="#">Apps</a>
-                    <a href="#">Jogos</a>
-                    <a href="#">Entretenimento</a>
-                    <a href="#">Ferramentas</a>
+                    <a href="#apps" onclick="filterByCategory('Entretenimento')">Entretenimento</a>
+                    <a href="#apps" onclick="filterByCategory('Música')">Música</a>
+                    <a href="#apps" onclick="filterByCategory('Educação')">Educação</a>
+                    <a href="#apps" onclick="filterByCategory('Ferramentas')">Ferramentas</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -182,12 +180,13 @@
             <i class="fas fa-fire"></i>
             <span>Popular</span>
         </a>
-        <a href="https://t.me/seu_canal" class="bottom-link" target="_blank">
+        <a href="https://t.me/ApkBugado" class="bottom-link" target="_blank">
             <i class="fab fa-telegram"></i>
             <span>Telegram</span>
         </a>
     </nav>
 
+    <script src="js/data.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

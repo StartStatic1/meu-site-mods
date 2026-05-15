@@ -430,18 +430,33 @@ function exportToSite() {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
 
-    showToast('Arquivo appsDatabase.json exportado! Substitua no js/app.js do site.', 'success');
+    showToast('Arquivo appsDatabase.json exportado! Substitua no js/data.js do site.', 'success');
 }
 
 function copyDatabaseCode() {
     const apps = getApps();
-    const code = `const appsDatabase = ${JSON.stringify(apps, null, 4)};`;
+    const header = '// ============================================\n// BASE DE DADOS DE APKS\n// Para adicionar/editar apps, use o Painel (/painel)\n// ou edite diretamente este arquivo.\n// ============================================\n\n';
+    const code = header + `const appsDatabase = ${JSON.stringify(apps, null, 4)};\n`;
 
     navigator.clipboard.writeText(code).then(() => {
-        showToast('Código copiado! Cole no arquivo js/app.js do site.', 'success');
+        showToast('Código copiado! Cole no arquivo js/data.js do site.', 'success');
     }).catch(() => {
-        showToast('Erro ao copiar. Exporte o JSON manualmente.', 'error');
+        // Fallback: criar textarea temporário
+        const textarea = document.createElement('textarea');
+        textarea.value = code;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast('Código copiado! Cole no arquivo js/data.js do site.', 'success');
     });
+}
+
+function clearAllData() {
+    if (!confirm('Tem certeza? Isso apagará TODOS os apps cadastrados. Esta ação não pode ser desfeita.')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    showToast('Todos os dados foram apagados.', 'success');
+    showPage('dashboard');
 }
 
 // ============================================
